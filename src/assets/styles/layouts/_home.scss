@@ -1,0 +1,42 @@
+/* Base Rules */
+
+body {
+    background: $bg-color;
+    margin: $centrado;
+}
+
+main {
+    color: var(--blanco);
+}
+
+nav {
+    background-color: var(--negro);
+}
+
+/* Layout Rules */
+
+.max {
+    max-width: 60%;
+}
+
+#logo {
+    width: 30%;
+}
+
+/* Module Rules */
+
+/* State Rules */
+
+/* Theme Rules */
+
+.btn {
+    @apply font-bold py-2 px-4 rounded;
+}
+
+.btn-yellow {
+    @apply bg-yellow text-white;
+}
+
+.btn-yellow:hover {
+    @apply bg-gray-400;
+}

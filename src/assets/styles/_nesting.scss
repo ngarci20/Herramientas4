@@ -1,0 +1,127 @@
+@import 'variables';
+@import 'funciones';
+
+/* Layout Rules */
+
+@media screen and (min-width: 361px) {
+    .card {
+        max-width: 300px;
+        margin: 1em;
+        color: $bg-color;
+
+        &img {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        max-width: 300px;
+        color: $bg-color;
+
+        &img {
+            width: 300px;
+            height: 300px;
+            margin-top: 1em;
+        }
+    }
+    #band2, #band4 {
+        margin-top: 1em;
+    }
+}
+
+@supports (display:grid) {
+    .maximg {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 361px) {
+//        .grid {
+//            margin: 2.5em 1.5em;
+//            display: grid;
+//            grid-gap: 1em;
+//            grid-template-columns: auto auto auto auto;
+//            align-items: center;
+//            grid-template-areas:
+//                'a a a a'
+//                'b b d d'
+//                'c c c c';
+//        }
+
+        .video {
+            height: 300px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .grid {
+            margin: 2.5em 1.5em;
+            text-align: center;
+            display: grid;
+            grid-gap: 1em;
+            grid-template-columns: auto auto;
+            grid-template-areas:
+                'a'
+                'b'
+                'd'
+                'c';
+        }
+
+        .hide {
+            display: none;
+        }
+    }
+
+//    .grid-item__a {
+//        grid-area: a;
+//    }
+//
+//    .grid-item__b {
+//        grid-area: b;
+//    }
+//
+//    .grid-item__c {
+//        grid-area: c;
+//    }
+//
+//    .grid-item__d {
+//        grid-area: d;
+//    }
+}
+
+@media screen and (min-width: 360px) {
+    .bandsdiv {
+        margin: var(--margen);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #wideimg {
+        background-image: url('../images/headerimg.jpg');
+    }
+    #micro {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 361px) {
+    #wideimg {
+        background-image: url('../images/header2.jpg');
+    }
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+}
